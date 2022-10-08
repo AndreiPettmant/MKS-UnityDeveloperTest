@@ -139,6 +139,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   HitEffect: {fileID: 6039309422145085337, guid: afd3a86e2f4ce444ab74d5ac51f4e423, type: 3}
   damage: 0
+  cannonBallSfx: {fileID: 0}
 --- !u!96 &4795413989940462969
 TrailRenderer:
   serializedVersion: 2

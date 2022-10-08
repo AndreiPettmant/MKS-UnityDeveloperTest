@@ -5,6 +5,8 @@ public class PlayerMovement : MonoBehaviour
 {
     [Header("Player Speed")]
     [SerializeField][Range(1f, 5f)] private int movementSpeed;
+    [Header("SFX")]
+    [SerializeField] private AudioSource hitSFX;
     private Camera cam;
     private Vector2 movement;
     private Vector2 mousePosition;
@@ -48,6 +50,7 @@ public class PlayerMovement : MonoBehaviour
     {
         if(collision.gameObject.tag == "CannonBall")
         {
+            hitSFX.Play();
             healthBar.health -= 0.1f;
             healthBar.CheckBoatStatus(healthBar.health);
         }

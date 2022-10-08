@@ -25,7 +25,7 @@ public class EnemyHealthBar : MonoBehaviour
 
     [Header("Fade value")]
     [SerializeField] private float fadeTime;
-    
+
 
     public void Start()
     {

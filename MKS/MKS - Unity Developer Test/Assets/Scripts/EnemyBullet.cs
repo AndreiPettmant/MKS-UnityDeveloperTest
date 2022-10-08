@@ -10,7 +10,6 @@ public class EnemyBullet : MonoBehaviour
     [Header("Bullet speed")]
     [SerializeField][Range(0f, 1f)] private float bulletSpeed;
 
-
     void Start()
     {
         bulletRB = this.GetComponent<Rigidbody2D>();
@@ -22,7 +21,7 @@ public class EnemyBullet : MonoBehaviour
     private void OnCollisionEnter2D(Collision2D collision)
     {
         GameObject effect = Instantiate(hitEffect, transform.position, Quaternion.identity) as GameObject;
-        Destroy(effect, 0.2f);
+        Destroy(effect, 0.25f);
         Destroy(gameObject);
     }
 }

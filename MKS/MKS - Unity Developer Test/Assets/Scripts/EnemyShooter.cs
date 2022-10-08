@@ -20,6 +20,10 @@ public class EnemyShooter : MonoBehaviour
     [Header("Score value")]
     [SerializeField]private int enemyPoint;
 
+    [Header("SFX")]
+    [SerializeField] private AudioSource hitSFX;
+    [SerializeField] private AudioSource shotSFX;
+
     private Rigidbody2D enemyRB;
     private Vector2 movement;
     private ScoreHandler scoreHandler;
@@ -49,7 +53,7 @@ public class EnemyShooter : MonoBehaviour
     {
         if (collision.gameObject.tag == "CannonBall")
         {
-
+            hitSFX.Play();
             enemyHealthBar.health -= 0.1f;
             enemyHealthBar.CheckBoatStatus(enemyHealthBar.health);
         }
@@ -102,6 +106,7 @@ public class EnemyShooter : MonoBehaviour
                 }
                 else if (distanceFromPlayer <= shootingRange && nextFireTime < Time.time)
                 {
+                    shotSFX.Play();
                     GameObject cannonBallEnemy = Instantiate(bulletPrefab, bulletParent.transform.position, Quaternion.identity);
                     nextFireTime = Time.time + fireRate;
                 }

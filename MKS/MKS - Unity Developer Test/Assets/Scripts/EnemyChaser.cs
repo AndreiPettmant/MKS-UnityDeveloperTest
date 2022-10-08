@@ -14,7 +14,11 @@ public class EnemyChaser : MonoBehaviour
 
     [Header("Score value")]
     [SerializeField][Range(0f, 1f)] private int enemyPoint;
-    
+
+    [Header("SFX")]
+    [SerializeField] private AudioSource hitSFX;
+    [SerializeField] private AudioSource explosionSFX;
+
     private Rigidbody2D enemyRB;
     private Vector2 movement;
     private PlayerHealthBar playerHealthBar;
@@ -62,6 +66,7 @@ public class EnemyChaser : MonoBehaviour
         
         if (collision.gameObject.name == "Player")
         {
+            explosionSFX.Play();
             canScore = false;
             capsuleCollider2D.enabled = false;
 
@@ -76,6 +81,7 @@ public class EnemyChaser : MonoBehaviour
 
         if(collision.gameObject.tag == "CannonBall")
         {
+            hitSFX.Play();
             canScore = true;
 
             enemyHealthBar.health -= 0.1f;

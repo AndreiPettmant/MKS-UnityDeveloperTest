@@ -12,7 +12,9 @@ public class PlayerAttack : MonoBehaviour
     [Header("Shot configurations")]
     [SerializeField][Range(0f, 5f)] private float bulletSpeed;
     [SerializeField][Range(0f, 5f)] private float fireRate;
-    
+    [Header("SFX")]
+    [SerializeField] private AudioSource shotSFX;
+
     private PlayerHealthBar healthBar;
     private GameHandler gameHandler;
     private float nexFire = 0f;
@@ -50,6 +52,7 @@ public class PlayerAttack : MonoBehaviour
         Rigidbody2D cannonBallRB = cannonBall.GetComponent<Rigidbody2D>();
 
         cannonBallRB.AddForce(singleFirePoint.up * bulletSpeed, ForceMode2D.Impulse);
+        shotSFX.Play();
     }
 
     private void MultipleShot()
@@ -61,6 +64,7 @@ public class PlayerAttack : MonoBehaviour
             Rigidbody2D cannonBallRB = cannonBall.GetComponent<Rigidbody2D>();
 
             cannonBallRB.AddForce(cannon.up * bulletSpeed, ForceMode2D.Impulse);
+            shotSFX.Play();
         }
     }
 }
