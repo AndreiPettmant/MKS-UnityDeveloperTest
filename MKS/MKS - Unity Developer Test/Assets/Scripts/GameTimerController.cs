@@ -16,9 +16,10 @@ public class GameTimerController : MonoBehaviour
         if (PlayerPrefs.GetFloat("Timer") == 0)
         {
             minGameSession = 60;
+            amount = minGameSession;
             PlayerPrefs.SetFloat("Timer", amount);
             DisplayTime(PlayerPrefs.GetFloat("Timer"));
-            amount = minGameSession;
+            
         }
         else
         {

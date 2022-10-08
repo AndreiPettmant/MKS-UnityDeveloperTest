@@ -12,10 +12,9 @@ public class GameHandler : MonoBehaviour
 
     private void Awake()
     {
-        if(timer == 0)
-        { 
-            PlayerPrefs.GetFloat("Timer");
-            timer = 60;
+        if(PlayerPrefs.GetFloat("Timer") <= 0)
+        {
+            timer = 60f;
             UpdateTimer(PlayerPrefs.GetFloat("Timer"));
         }
         else
