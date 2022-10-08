@@ -10,7 +10,7 @@ public class EnemyBullet : MonoBehaviour
     [Header("Bullet speed")]
     [SerializeField][Range(0f, 1f)] private float bulletSpeed;
 
-    void Start()
+    private void Start()
     {
         bulletRB = this.GetComponent<Rigidbody2D>();
         target = GameObject.FindGameObjectWithTag("Player");

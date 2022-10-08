@@ -186,7 +186,6 @@ MonoBehaviour:
   healthAmountToTotalDeterioration: 0
   health: 0.75
   fadeTime: 0.5
-  deathSFX: {fileID: 3772732118362429661}
 --- !u!1 &6118842108669936290
 GameObject:
   m_ObjectHideFlags: 0
@@ -569,6 +568,7 @@ MonoBehaviour:
   moveSpeed: 2
   lineOfSight: 16
   shootingRange: 3
+  amountDamageTaken: 0.1
   enemyPoint: 1
   hitSFX: {fileID: 3772732118362429661}
   shotSFX: {fileID: 6424510752188953361}

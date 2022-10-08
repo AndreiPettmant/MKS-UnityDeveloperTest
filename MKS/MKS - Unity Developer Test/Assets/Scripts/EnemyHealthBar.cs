@@ -60,6 +60,7 @@ public class EnemyHealthBar : MonoBehaviour
         if (health <= healthAmountToTotalDeterioration)
         {
             boatSprite.sprite = boatDestroyed;
+            barParent.gameObject.SetActive(false);
             FadeBoat();
         }
 

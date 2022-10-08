@@ -177,6 +177,7 @@ MonoBehaviour:
   explosionDamage: 0.3
   moveSpeed: 2.5
   lineOfSight: 16
+  amountDamageTaken: 0.2
   enemyPoint: 1
   hitSFX: {fileID: 2394221377308710817}
   explosionSFX: {fileID: 9025588388853961551}
@@ -234,11 +235,10 @@ MonoBehaviour:
   boatDamageHigh: {fileID: 21300000, guid: f1cb1d5bc2895584fb1f5aa404c60619, type: 3}
   boatDestroyed: {fileID: 21300000, guid: 865b9afcdfdb64f479e5b7752e9ea5e6, type: 3}
   healthAmountToLowDeterioration: 0.35
-  healthAmountToHighDeterioration: 0.1
+  healthAmountToHighDeterioration: 0.15
   healthAmountToTotalDeterioration: 0
   health: 0.5
   fadeTime: 0.5
-  deathSFX: {fileID: 2394221377308710817}
 --- !u!1 &1937617103470344023
 GameObject:
   m_ObjectHideFlags: 0

@@ -16,6 +16,7 @@ public class EnemyShooter : MonoBehaviour
     [SerializeField][Range(0f, 1f)] private float moveSpeed;
     [SerializeField][Range(0f, 1f)] private float lineOfSight;
     [SerializeField][Range(0f, 1f)] private float shootingRange;
+    [SerializeField][Range(0f, 1f)] private float amountDamageTaken;
 
     [Header("Score value")]
     [SerializeField]private int enemyPoint;
@@ -54,7 +55,7 @@ public class EnemyShooter : MonoBehaviour
         if (collision.gameObject.tag == "CannonBall")
         {
             hitSFX.Play();
-            enemyHealthBar.health -= 0.1f;
+            enemyHealthBar.health -= amountDamageTaken;
             enemyHealthBar.CheckBoatStatus(enemyHealthBar.health);
         }
     }
