@@ -68,7 +68,7 @@ public class EnemyHealthBar : MonoBehaviour
     private void FadeBoat()
     {
         iTween.FadeTo(boat, 0f, fadeTime);
-        iTween.ScaleTo(boat, new Vector2(0f, 0f), 3f);
+        iTween.ScaleTo(boat, new Vector2(0f, 0f), 10f);
         Destroy(boat, 0.5f);
     }
 }
