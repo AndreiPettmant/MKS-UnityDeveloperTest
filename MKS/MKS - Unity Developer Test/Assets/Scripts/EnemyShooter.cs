@@ -24,7 +24,6 @@ public class EnemyShooter : MonoBehaviour
     private Vector2 movement;
     private ScoreHandler scoreHandler;
     private GameHandler gameHandler;
-    private CapsuleCollider2D capsuleCollider2D;
 
     private void Awake()
     {
@@ -62,7 +61,6 @@ public class EnemyShooter : MonoBehaviour
         {
             scoreHandler.score += enemyPoint;
             scoreHandler.UpdateScore();
-            capsuleCollider2D.enabled = false;
         }
     }
 
@@ -79,7 +77,6 @@ public class EnemyShooter : MonoBehaviour
     private void LoadComponents()
     {
         enemyRB = this.GetComponent<Rigidbody2D>();
-        capsuleCollider2D = this.GetComponent<CapsuleCollider2D>();
         Target = GameObject.FindGameObjectWithTag("Player").transform;
         scoreHandler = GameObject.FindGameObjectWithTag("ScoreHandler").GetComponent<ScoreHandler>();
         gameHandler = GameObject.FindGameObjectWithTag("GameHandler").GetComponent<GameHandler>();
