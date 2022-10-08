@@ -10,7 +10,7 @@ public class EnemyChaser : MonoBehaviour
     [Header("Enemy Configurations")]
     [SerializeField][Range(0f, 1f)] private float explosionDamage;
     [SerializeField][Range(0f, 1f)] private float moveSpeed;
-    [SerializeField][Range(0f, 1f)] private float lineOfSight;
+    [SerializeField][Range(0f, 20f)] private float lineOfSight;
     [SerializeField][Range(0f, 1f)] private float amountDamageTaken;
 
     [Header("Score value")]

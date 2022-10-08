@@ -11,11 +11,11 @@ public class EnemyShooter : MonoBehaviour
 
     [Header("Enemy Configurations")]
     [SerializeField][Range(0f, 1f)] private float shootDamage;
-    [SerializeField][Range(0f, 1f)] public float fireRate;
-    [SerializeField][Range(0f, 1f)] private float nextFireTime;
-    [SerializeField][Range(0f, 1f)] private float moveSpeed;
-    [SerializeField][Range(0f, 1f)] private float lineOfSight;
-    [SerializeField][Range(0f, 1f)] private float shootingRange;
+    [SerializeField][Range(0f, 5f)] public float fireRate;
+    [SerializeField][Range(0f, 5f)] private float nextFireTime;
+    [SerializeField][Range(0f, 5f)] private float moveSpeed;
+    [SerializeField][Range(0f, 20f)] private float lineOfSight;
+    [SerializeField][Range(0f, 20f)] private float shootingRange;
     [SerializeField][Range(0f, 1f)] private float amountDamageTaken;
 
     [Header("Score value")]
