@@ -566,7 +566,7 @@ MonoBehaviour:
   fireRate: 1
   nextFireTime: 1
   moveSpeed: 2
-  lineOfSight: 16
+  lineOfSight: 3.5
   shootingRange: 3
   amountDamageTaken: 0.1
   enemyPoint: 1
